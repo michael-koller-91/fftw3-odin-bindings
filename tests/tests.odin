@@ -126,3 +126,47 @@ fftwf_dft_r2c_1d :: proc(t: ^testing.T) {
 		)
 	}
 }
+
+/*
+fftw test with threads.
+*/
+@(test)
+fftw_threads :: proc(t: ^testing.T) {
+	err := fftw3.fftw_init_threads()
+	testing.expect(t, err != 0, "Thread initialization failed.")
+
+	num_threads: i32 = 2
+	fftw3.fftw_plan_with_nthreads(num_threads)
+	nt := fftw3.fftw_planner_nthreads()
+	testing.expectf(
+		t,
+		num_threads == nt,
+		"Planner should be able to use %v threads but says that it can use %v.",
+		num_threads,
+		nt,
+	)
+
+	fftw_dft_1d(t)
+}
+
+/*
+fftwf test with threads.
+*/
+@(test)
+fftwf_threads :: proc(t: ^testing.T) {
+	err := fftw3.fftwf_init_threads()
+	testing.expect(t, err != 0, "Thread initialization failed.")
+
+	num_threads: i32 = 2
+	fftw3.fftwf_plan_with_nthreads(num_threads)
+	nt := fftw3.fftwf_planner_nthreads()
+	testing.expectf(
+		t,
+		num_threads == nt,
+		"Planner should be able to use %v threads but says that it can use %v.",
+		num_threads,
+		nt,
+	)
+
+	fftwf_dft_r2c_1d(t)
+}
