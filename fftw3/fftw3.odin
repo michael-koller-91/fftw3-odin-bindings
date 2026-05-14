@@ -47,6 +47,17 @@ package fftw3
 
 import "core:c"
 
+when ODIN_OS == .Windows { /* NOTE: This has not been tested. PR welcome. */
+	foreign import lib "fftw3.lib"
+} else when ODIN_OS == .Linux {
+	@(extra_linker_flags = "-lfftw3f -lm")
+	foreign import lib "system:fftw3"
+} else { /* NOTE: This has not been tested. PR welcome. */
+	foreign import lib "system:fftw3"
+}
+
+FILE :: c.FILE
+
 fftw_r2r_kind_do_not_use_me :: enum u32 {
 	R2HC    = 0,
 	HC2R    = 1,
