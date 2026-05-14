@@ -48,9 +48,9 @@ package fftw3
 import "core:c"
 
 when ODIN_OS == .Linux {
-	@(extra_linker_flags = "-lfftw3f -lm")
+	@(extra_linker_flags = "-lfftw3f_threads -lfftw3f -lm -lpthread")
 	foreign import libf "system:fftw3f"
-	@(extra_linker_flags = "-lfftw3 -lm")
+	@(extra_linker_flags = "-lfftw3_threads -lfftw3 -lm -lpthread")
 	foreign import lib "system:fftw3"
 }
 
