@@ -574,8 +574,8 @@ Sign :: enum i32 {
 
 FFTW_NO_TIMELIMIT :: (-1.0)
 
-/* documented flags */
 Flags :: enum u32 {
+	/* documented flags */
 	MEASURE                = 0,
 	DESTROY_INPUT          = (1 << 0),
 	UNALIGNED              = (1 << 1),
