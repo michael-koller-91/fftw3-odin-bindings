@@ -1,6 +1,12 @@
 fftw3: fftw3/fftw3.odin
 	odin build fftw3 -build-mode:lib -out:fftw3/fftw3.a
 
+test: tests/tests.odin fftw3
+	odin test tests
+
+test-debug: tests/tests.odin fftw3
+	odin test tests -define:ODIN_TEST_LOG_LEVEL="debug"
+
 download-odin:
 	mkdir downloads
 	# download and unpack Odin
