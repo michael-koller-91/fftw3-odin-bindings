@@ -1,3 +1,6 @@
+fftw3: fftw3/fftw3.odin
+	odin build fftw3 -build-mode:lib -out:fftw3/fftw3.a
+
 download-odin:
 	mkdir downloads
 	# download and unpack Odin
