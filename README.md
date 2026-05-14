@@ -24,7 +24,7 @@ sudo apt install libfftw3-dev
 
 ### Compile [fftw3.odin](./fftw3/fftw3.odin)
 ```console
-make fftw3
+make
 ```
 
 ### Run Tests
