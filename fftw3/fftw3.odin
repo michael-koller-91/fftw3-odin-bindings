@@ -115,31 +115,31 @@ foreign lib {
 	fftw_execute :: proc(p: fftw_plan) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft :: proc(rank: i32, n: ^i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_dft :: proc(rank: i32, n: ^i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_1d :: proc(n: i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_1d :: proc(n: i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_2d :: proc(n0: i32, n1: i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_2d :: proc(n0: i32, n1: i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_many_dft :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftw_complex, inembed: ^i32, istride: i32, idist: i32, out: ^fftw_complex, onembed: ^i32, ostride: i32, odist: i32, sign: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_many_dft :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftw_complex, inembed: ^i32, istride: i32, idist: i32, out: ^fftw_complex, onembed: ^i32, ostride: i32, odist: i32, sign: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru_dft :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_guru_dft :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru_split_dft :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru_split_dft :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru64_dft :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_guru64_dft :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^fftw_complex, out: ^fftw_complex, sign: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru64_split_dft :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru64_split_dft :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftw_execute_dft :: proc(p: fftw_plan, _in: ^fftw_complex, out: ^fftw_complex) ---
@@ -148,58 +148,58 @@ foreign lib {
 	fftw_execute_split_dft :: proc(p: fftw_plan, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_many_dft_r2c :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^fftw_complex, onembed: ^i32, ostride: i32, odist: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_many_dft_r2c :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^fftw_complex, onembed: ^i32, ostride: i32, odist: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_r2c :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^fftw_complex, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_r2c :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^fftw_complex, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_r2c_1d :: proc(n: i32, _in: ^f64, out: ^fftw_complex, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_r2c_1d :: proc(n: i32, _in: ^f64, out: ^fftw_complex, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_r2c_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^fftw_complex, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_r2c_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^fftw_complex, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_r2c_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^fftw_complex, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_r2c_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^fftw_complex, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_many_dft_c2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftw_complex, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, flags: u32) -> fftw_plan ---
+	fftw_plan_many_dft_c2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftw_complex, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_c2r :: proc(rank: i32, n: ^i32, _in: ^fftw_complex, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_c2r :: proc(rank: i32, n: ^i32, _in: ^fftw_complex, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_c2r_1d :: proc(n: i32, _in: ^fftw_complex, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_c2r_1d :: proc(n: i32, _in: ^fftw_complex, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_c2r_2d :: proc(n0: i32, n1: i32, _in: ^fftw_complex, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_c2r_2d :: proc(n0: i32, n1: i32, _in: ^fftw_complex, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_dft_c2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftw_complex, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_dft_c2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftw_complex, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^f64, out: ^fftw_complex, flags: u32) -> fftw_plan ---
+	fftw_plan_guru_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^f64, out: ^fftw_complex, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^fftw_complex, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^fftw_complex, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru_split_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru_split_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru_split_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, ri: ^f64, ii: ^f64, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru_split_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, ri: ^f64, ii: ^f64, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru64_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^f64, out: ^fftw_complex, flags: u32) -> fftw_plan ---
+	fftw_plan_guru64_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^f64, out: ^fftw_complex, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru64_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^fftw_complex, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru64_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^fftw_complex, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru64_split_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru64_split_dft_r2c :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru64_split_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, ri: ^f64, ii: ^f64, out: ^f64, flags: u32) -> fftw_plan ---
+	fftw_plan_guru64_split_dft_c2r :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, ri: ^f64, ii: ^f64, out: ^f64, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftw_execute_dft_r2c :: proc(p: fftw_plan, _in: ^f64, out: ^fftw_complex) ---
@@ -214,25 +214,25 @@ foreign lib {
 	fftw_execute_split_dft_c2r :: proc(p: fftw_plan, ri: ^f64, ii: ^f64, out: ^f64) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_many_r2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, kind: ^fftw_r2r_kind, flags: u32) -> fftw_plan ---
+	fftw_plan_many_r2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, kind: ^fftw_r2r_kind, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_r2r :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^f64, kind: ^fftw_r2r_kind, flags: u32) -> fftw_plan ---
+	fftw_plan_r2r :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^f64, kind: ^fftw_r2r_kind, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_r2r_1d :: proc(n: i32, _in: ^f64, out: ^f64, kind: fftw_r2r_kind, flags: u32) -> fftw_plan ---
+	fftw_plan_r2r_1d :: proc(n: i32, _in: ^f64, out: ^f64, kind: fftw_r2r_kind, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_r2r_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^f64, kind0: fftw_r2r_kind, kind1: fftw_r2r_kind, flags: u32) -> fftw_plan ---
+	fftw_plan_r2r_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^f64, kind0: fftw_r2r_kind, kind1: fftw_r2r_kind, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_r2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^f64, kind0: fftw_r2r_kind, kind1: fftw_r2r_kind, kind2: fftw_r2r_kind, flags: u32) -> fftw_plan ---
+	fftw_plan_r2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^f64, kind0: fftw_r2r_kind, kind1: fftw_r2r_kind, kind2: fftw_r2r_kind, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru_r2r :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^f64, out: ^f64, kind: ^fftw_r2r_kind, flags: u32) -> fftw_plan ---
+	fftw_plan_guru_r2r :: proc(rank: i32, dims: ^fftw_iodim, howmany_rank: i32, howmany_dims: ^fftw_iodim, _in: ^f64, out: ^f64, kind: ^fftw_r2r_kind, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftw_plan_guru64_r2r :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^f64, out: ^f64, kind: ^fftw_r2r_kind, flags: u32) -> fftw_plan ---
+	fftw_plan_guru64_r2r :: proc(rank: i32, dims: ^fftw_iodim64, howmany_rank: i32, howmany_dims: ^fftw_iodim64, _in: ^f64, out: ^f64, kind: ^fftw_r2r_kind, flags: Flags) -> fftw_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftw_execute_r2r :: proc(p: fftw_plan, _in: ^f64, out: ^f64) ---
@@ -356,31 +356,31 @@ foreign lib {
 	fftwf_execute :: proc(p: fftwf_plan) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft :: proc(rank: i32, n: ^i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft :: proc(rank: i32, n: ^i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_1d :: proc(n: i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_1d :: proc(n: i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_2d :: proc(n0: i32, n1: i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_2d :: proc(n0: i32, n1: i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_many_dft :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwf_complex, inembed: ^i32, istride: i32, idist: i32, out: ^fftwf_complex, onembed: ^i32, ostride: i32, odist: i32, sign: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_many_dft :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwf_complex, inembed: ^i32, istride: i32, idist: i32, out: ^fftwf_complex, onembed: ^i32, ostride: i32, odist: i32, sign: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru_dft :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru_dft :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru_split_dft :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, ri: ^f32, ii: ^f32, ro: ^f32, io: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru_split_dft :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, ri: ^f32, ii: ^f32, ro: ^f32, io: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru64_dft :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru64_dft :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^fftwf_complex, out: ^fftwf_complex, sign: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru64_split_dft :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, ri: ^f32, ii: ^f32, ro: ^f32, io: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru64_split_dft :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, ri: ^f32, ii: ^f32, ro: ^f32, io: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftwf_execute_dft :: proc(p: fftwf_plan, _in: ^fftwf_complex, out: ^fftwf_complex) ---
@@ -389,58 +389,58 @@ foreign lib {
 	fftwf_execute_split_dft :: proc(p: fftwf_plan, ri: ^f32, ii: ^f32, ro: ^f32, io: ^f32) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_many_dft_r2c :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f32, inembed: ^i32, istride: i32, idist: i32, out: ^fftwf_complex, onembed: ^i32, ostride: i32, odist: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_many_dft_r2c :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f32, inembed: ^i32, istride: i32, idist: i32, out: ^fftwf_complex, onembed: ^i32, ostride: i32, odist: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_r2c :: proc(rank: i32, n: ^i32, _in: ^f32, out: ^fftwf_complex, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_r2c :: proc(rank: i32, n: ^i32, _in: ^f32, out: ^fftwf_complex, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_r2c_1d :: proc(n: i32, _in: ^f32, out: ^fftwf_complex, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_r2c_1d :: proc(n: i32, _in: ^f32, out: ^fftwf_complex, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_r2c_2d :: proc(n0: i32, n1: i32, _in: ^f32, out: ^fftwf_complex, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_r2c_2d :: proc(n0: i32, n1: i32, _in: ^f32, out: ^fftwf_complex, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_r2c_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f32, out: ^fftwf_complex, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_r2c_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f32, out: ^fftwf_complex, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_many_dft_c2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwf_complex, inembed: ^i32, istride: i32, idist: i32, out: ^f32, onembed: ^i32, ostride: i32, odist: i32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_many_dft_c2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwf_complex, inembed: ^i32, istride: i32, idist: i32, out: ^f32, onembed: ^i32, ostride: i32, odist: i32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_c2r :: proc(rank: i32, n: ^i32, _in: ^fftwf_complex, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_c2r :: proc(rank: i32, n: ^i32, _in: ^fftwf_complex, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_c2r_1d :: proc(n: i32, _in: ^fftwf_complex, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_c2r_1d :: proc(n: i32, _in: ^fftwf_complex, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_c2r_2d :: proc(n0: i32, n1: i32, _in: ^fftwf_complex, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_c2r_2d :: proc(n0: i32, n1: i32, _in: ^fftwf_complex, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_dft_c2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwf_complex, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_dft_c2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwf_complex, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^f32, out: ^fftwf_complex, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^f32, out: ^fftwf_complex, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^fftwf_complex, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^fftwf_complex, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru_split_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^f32, ro: ^f32, io: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru_split_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^f32, ro: ^f32, io: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru_split_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, ri: ^f32, ii: ^f32, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru_split_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, ri: ^f32, ii: ^f32, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru64_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^f32, out: ^fftwf_complex, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru64_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^f32, out: ^fftwf_complex, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru64_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^fftwf_complex, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru64_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^fftwf_complex, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru64_split_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^f32, ro: ^f32, io: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru64_split_dft_r2c :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^f32, ro: ^f32, io: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru64_split_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, ri: ^f32, ii: ^f32, out: ^f32, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru64_split_dft_c2r :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, ri: ^f32, ii: ^f32, out: ^f32, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftwf_execute_dft_r2c :: proc(p: fftwf_plan, _in: ^f32, out: ^fftwf_complex) ---
@@ -455,25 +455,25 @@ foreign lib {
 	fftwf_execute_split_dft_c2r :: proc(p: fftwf_plan, ri: ^f32, ii: ^f32, out: ^f32) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_many_r2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f32, inembed: ^i32, istride: i32, idist: i32, out: ^f32, onembed: ^i32, ostride: i32, odist: i32, kind: ^fftwf_r2r_kind, flags: u32) -> fftwf_plan ---
+	fftwf_plan_many_r2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f32, inembed: ^i32, istride: i32, idist: i32, out: ^f32, onembed: ^i32, ostride: i32, odist: i32, kind: ^fftwf_r2r_kind, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_r2r :: proc(rank: i32, n: ^i32, _in: ^f32, out: ^f32, kind: ^fftwf_r2r_kind, flags: u32) -> fftwf_plan ---
+	fftwf_plan_r2r :: proc(rank: i32, n: ^i32, _in: ^f32, out: ^f32, kind: ^fftwf_r2r_kind, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_r2r_1d :: proc(n: i32, _in: ^f32, out: ^f32, kind: fftwf_r2r_kind, flags: u32) -> fftwf_plan ---
+	fftwf_plan_r2r_1d :: proc(n: i32, _in: ^f32, out: ^f32, kind: fftwf_r2r_kind, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_r2r_2d :: proc(n0: i32, n1: i32, _in: ^f32, out: ^f32, kind0: fftwf_r2r_kind, kind1: fftwf_r2r_kind, flags: u32) -> fftwf_plan ---
+	fftwf_plan_r2r_2d :: proc(n0: i32, n1: i32, _in: ^f32, out: ^f32, kind0: fftwf_r2r_kind, kind1: fftwf_r2r_kind, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_r2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f32, out: ^f32, kind0: fftwf_r2r_kind, kind1: fftwf_r2r_kind, kind2: fftwf_r2r_kind, flags: u32) -> fftwf_plan ---
+	fftwf_plan_r2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f32, out: ^f32, kind0: fftwf_r2r_kind, kind1: fftwf_r2r_kind, kind2: fftwf_r2r_kind, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru_r2r :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^f32, out: ^f32, kind: ^fftwf_r2r_kind, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru_r2r :: proc(rank: i32, dims: ^fftwf_iodim, howmany_rank: i32, howmany_dims: ^fftwf_iodim, _in: ^f32, out: ^f32, kind: ^fftwf_r2r_kind, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwf_plan_guru64_r2r :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^f32, out: ^f32, kind: ^fftwf_r2r_kind, flags: u32) -> fftwf_plan ---
+	fftwf_plan_guru64_r2r :: proc(rank: i32, dims: ^fftwf_iodim64, howmany_rank: i32, howmany_dims: ^fftwf_iodim64, _in: ^f32, out: ^f32, kind: ^fftwf_r2r_kind, flags: Flags) -> fftwf_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftwf_execute_r2r :: proc(p: fftwf_plan, _in: ^f32, out: ^f32) ---
@@ -597,31 +597,31 @@ foreign lib {
 	fftwl_execute :: proc(p: fftwl_plan) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft :: proc(rank: i32, n: ^i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft :: proc(rank: i32, n: ^i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_1d :: proc(n: i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_1d :: proc(n: i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_2d :: proc(n0: i32, n1: i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_2d :: proc(n0: i32, n1: i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_many_dft :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwl_complex, inembed: ^i32, istride: i32, idist: i32, out: ^fftwl_complex, onembed: ^i32, ostride: i32, odist: i32, sign: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_many_dft :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwl_complex, inembed: ^i32, istride: i32, idist: i32, out: ^fftwl_complex, onembed: ^i32, ostride: i32, odist: i32, sign: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru_dft :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru_dft :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru_split_dft :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru_split_dft :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru64_dft :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru64_dft :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^fftwl_complex, out: ^fftwl_complex, sign: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru64_split_dft :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru64_split_dft :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftwl_execute_dft :: proc(p: fftwl_plan, _in: ^fftwl_complex, out: ^fftwl_complex) ---
@@ -630,58 +630,58 @@ foreign lib {
 	fftwl_execute_split_dft :: proc(p: fftwl_plan, ri: ^f64, ii: ^f64, ro: ^f64, io: ^f64) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_many_dft_r2c :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^fftwl_complex, onembed: ^i32, ostride: i32, odist: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_many_dft_r2c :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^fftwl_complex, onembed: ^i32, ostride: i32, odist: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_r2c :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^fftwl_complex, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_r2c :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^fftwl_complex, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_r2c_1d :: proc(n: i32, _in: ^f64, out: ^fftwl_complex, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_r2c_1d :: proc(n: i32, _in: ^f64, out: ^fftwl_complex, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_r2c_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^fftwl_complex, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_r2c_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^fftwl_complex, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_r2c_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^fftwl_complex, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_r2c_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^fftwl_complex, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_many_dft_c2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwl_complex, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, flags: u32) -> fftwl_plan ---
+	fftwl_plan_many_dft_c2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^fftwl_complex, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_c2r :: proc(rank: i32, n: ^i32, _in: ^fftwl_complex, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_c2r :: proc(rank: i32, n: ^i32, _in: ^fftwl_complex, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_c2r_1d :: proc(n: i32, _in: ^fftwl_complex, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_c2r_1d :: proc(n: i32, _in: ^fftwl_complex, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_c2r_2d :: proc(n0: i32, n1: i32, _in: ^fftwl_complex, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_c2r_2d :: proc(n0: i32, n1: i32, _in: ^fftwl_complex, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_dft_c2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwl_complex, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_dft_c2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^fftwl_complex, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^f64, out: ^fftwl_complex, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^f64, out: ^fftwl_complex, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^fftwl_complex, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^fftwl_complex, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru_split_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru_split_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru_split_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, ri: ^f64, ii: ^f64, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru_split_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, ri: ^f64, ii: ^f64, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru64_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^f64, out: ^fftwl_complex, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru64_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^f64, out: ^fftwl_complex, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru64_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^fftwl_complex, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru64_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^fftwl_complex, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru64_split_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^f64, ro: ^f64, io: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru64_split_dft_r2c :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^f64, ro: ^f64, io: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru64_split_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, ri: ^f64, ii: ^f64, out: ^f64, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru64_split_dft_c2r :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, ri: ^f64, ii: ^f64, out: ^f64, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftwl_execute_dft_r2c :: proc(p: fftwl_plan, _in: ^f64, out: ^fftwl_complex) ---
@@ -696,25 +696,25 @@ foreign lib {
 	fftwl_execute_split_dft_c2r :: proc(p: fftwl_plan, ri: ^f64, ii: ^f64, out: ^f64) ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_many_r2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, kind: ^fftwl_r2r_kind, flags: u32) -> fftwl_plan ---
+	fftwl_plan_many_r2r :: proc(rank: i32, n: ^i32, howmany: i32, _in: ^f64, inembed: ^i32, istride: i32, idist: i32, out: ^f64, onembed: ^i32, ostride: i32, odist: i32, kind: ^fftwl_r2r_kind, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_r2r :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^f64, kind: ^fftwl_r2r_kind, flags: u32) -> fftwl_plan ---
+	fftwl_plan_r2r :: proc(rank: i32, n: ^i32, _in: ^f64, out: ^f64, kind: ^fftwl_r2r_kind, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_r2r_1d :: proc(n: i32, _in: ^f64, out: ^f64, kind: fftwl_r2r_kind, flags: u32) -> fftwl_plan ---
+	fftwl_plan_r2r_1d :: proc(n: i32, _in: ^f64, out: ^f64, kind: fftwl_r2r_kind, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_r2r_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^f64, kind0: fftwl_r2r_kind, kind1: fftwl_r2r_kind, flags: u32) -> fftwl_plan ---
+	fftwl_plan_r2r_2d :: proc(n0: i32, n1: i32, _in: ^f64, out: ^f64, kind0: fftwl_r2r_kind, kind1: fftwl_r2r_kind, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_r2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^f64, kind0: fftwl_r2r_kind, kind1: fftwl_r2r_kind, kind2: fftwl_r2r_kind, flags: u32) -> fftwl_plan ---
+	fftwl_plan_r2r_3d :: proc(n0: i32, n1: i32, n2: i32, _in: ^f64, out: ^f64, kind0: fftwl_r2r_kind, kind1: fftwl_r2r_kind, kind2: fftwl_r2r_kind, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru_r2r :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^f64, out: ^f64, kind: ^fftwl_r2r_kind, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru_r2r :: proc(rank: i32, dims: ^fftwl_iodim, howmany_rank: i32, howmany_dims: ^fftwl_iodim, _in: ^f64, out: ^f64, kind: ^fftwl_r2r_kind, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
-	fftwl_plan_guru64_r2r :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^f64, out: ^f64, kind: ^fftwl_r2r_kind, flags: u32) -> fftwl_plan ---
+	fftwl_plan_guru64_r2r :: proc(rank: i32, dims: ^fftwl_iodim64, howmany_rank: i32, howmany_dims: ^fftwl_iodim64, _in: ^f64, out: ^f64, kind: ^fftwl_r2r_kind, flags: Flags) -> fftwl_plan ---
 
 	/* end of FFTW_DEFINE_API macro */
 	fftwl_execute_r2r :: proc(p: fftwl_plan, _in: ^f64, out: ^f64) ---
@@ -810,20 +810,25 @@ foreign lib {
 	fftwl_alignment_of :: proc(p: ^f64) -> i32 ---
 }
 
-FFTW_FORWARD :: (-1)
-FFTW_BACKWARD :: (+1)
+Sign :: enum i32 {
+	FORWARD  = -1,
+	BACKWARD = +1,
+}
+
 FFTW_NO_TIMELIMIT :: (-1.0)
 
 /* documented flags */
-FFTW_MEASURE :: (0)
-FFTW_DESTROY_INPUT :: (1 << 0)
-FFTW_UNALIGNED :: (1 << 1)
-FFTW_CONSERVE_MEMORY :: (1 << 2)
-FFTW_EXHAUSTIVE :: (1 << 3) /* NO_EXHAUSTIVE is default */
-FFTW_PRESERVE_INPUT :: (1 << 4) /* cancels FFTW_DESTROY_INPUT */
-FFTW_PATIENT :: (1 << 5) /* IMPATIENT is default */
-FFTW_ESTIMATE :: (1 << 6)
-FFTW_WISDOM_ONLY :: (1 << 21)
+Flags :: enum u32 {
+	MEASURE         = 0,
+	DESTROY_INPUT   = (1 << 0),
+	UNALIGNED       = (1 << 1),
+	CONSERVE_MEMORY = (1 << 2),
+	EXHAUSTIVE      = (1 << 3), /* NO_EXHAUSTIVE is default */
+	PRESERVE_INPUT  = (1 << 4), /* cancels FFTW_DESTROY_INPUT */
+	PATIENT         = (1 << 5), /* IMPATIENT is default */
+	ESTIMATE        = (1 << 6),
+	WISDOM_ONLY     = (1 << 21),
+}
 
 /* undocumented beyond-guru flags */
 FFTW_ESTIMATE_PATIENT :: (1 << 7)
