@@ -576,29 +576,29 @@ FFTW_NO_TIMELIMIT :: (-1.0)
 
 /* documented flags */
 Flags :: enum u32 {
-	MEASURE         = 0,
-	DESTROY_INPUT   = (1 << 0),
-	UNALIGNED       = (1 << 1),
-	CONSERVE_MEMORY = (1 << 2),
-	EXHAUSTIVE      = (1 << 3), /* NO_EXHAUSTIVE is default */
-	PRESERVE_INPUT  = (1 << 4), /* cancels FFTW_DESTROY_INPUT */
-	PATIENT         = (1 << 5), /* IMPATIENT is default */
-	ESTIMATE        = (1 << 6),
-	WISDOM_ONLY     = (1 << 21),
-}
+	MEASURE                     = 0,
+	DESTROY_INPUT               = (1 << 0),
+	UNALIGNED                   = (1 << 1),
+	CONSERVE_MEMORY             = (1 << 2),
+	EXHAUSTIVE                  = (1 << 3), /* NO_EXHAUSTIVE is default */
+	PRESERVE_INPUT              = (1 << 4), /* cancels FFTW_DESTROY_INPUT */
+	PATIENT                     = (1 << 5), /* IMPATIENT is default */
+	ESTIMATE                    = (1 << 6),
+	WISDOM_ONLY                 = (1 << 21),
 
-/* undocumented beyond-guru flags */
-FFTW_ESTIMATE_PATIENT :: (1 << 7)
-FFTW_BELIEVE_PCOST :: (1 << 8)
-FFTW_NO_DFT_R2HC :: (1 << 9)
-FFTW_NO_NONTHREADED :: (1 << 10)
-FFTW_NO_BUFFERING :: (1 << 11)
-FFTW_NO_INDIRECT_OP :: (1 << 12)
-FFTW_ALLOW_LARGE_GENERIC :: (1 << 13) /* NO_LARGE_GENERIC is default */
-FFTW_NO_RANK_SPLITS :: (1 << 14)
-FFTW_NO_VRANK_SPLITS :: (1 << 15)
-FFTW_NO_VRECURSE :: (1 << 16)
-FFTW_NO_SIMD :: (1 << 17)
-FFTW_NO_SLOW :: (1 << 18)
-FFTW_NO_FIXED_RADIX_LARGE_N :: (1 << 19)
-FFTW_ALLOW_PRUNING :: (1 << 20)
+	/* undocumented beyond-guru flags */
+	FFTW_ESTIMATE_PATIENT       = 1 << 7,
+	FFTW_BELIEVE_PCOST          = 1 << 8,
+	FFTW_NO_DFT_R2HC            = 1 << 9,
+	FFTW_NO_NONTHREADED         = 1 << 10,
+	FFTW_NO_BUFFERING           = 1 << 11,
+	FFTW_NO_INDIRECT_OP         = 1 << 12,
+	FFTW_ALLOW_LARGE_GENERIC    = 1 << 13, /* NO_LARGE_GENERIC is default */
+	FFTW_NO_RANK_SPLITS         = 1 << 14,
+	FFTW_NO_VRANK_SPLITS        = 1 << 15,
+	FFTW_NO_VRECURSE            = 1 << 16,
+	FFTW_NO_SIMD                = 1 << 17,
+	FFTW_NO_SLOW                = 1 << 18,
+	FFTW_NO_FIXED_RADIX_LARGE_N = 1 << 19,
+	FFTW_ALLOW_PRUNING          = 1 << 20,
+}
