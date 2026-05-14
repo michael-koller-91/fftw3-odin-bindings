@@ -68,7 +68,7 @@ fftw3.fftw_execute_dft(plan, buf_x, buf_x_forward)
 
 1. generate [fftw3.odin](./fftw3/fftw3.odin) using the [Odin Bindings Generator for C Libraries](https://github.com/karl-zylinski/odin-c-bindgen)
 1. add `FILE :: c.FILE`
-1. add `foreign import lib "system:fftw3"` with `@(extra_linker_flags = "-lfftw3_threads -lfftw3 -lm -pthread")`; same for the single precision version
+1. add `foreign import lib "system:fftw3"` with `@(extra_linker_flags = "-lfftw3_threads -lfftw3 -lm -lpthread")`; same for the single precision version
 1. convert flags like `FFTW_MEASURE` to enum `Flags.MEASURE` and replace `flags: u32` with `flags: Flags` in signatures
 1. convert `FFTW_FORWARD` and `FFTW_BACKWARD` to enum `Sign.FORWARD` and `Sign.BACKWARD` and replace `sign: i32` with `sign: Sign` in signatures
 
