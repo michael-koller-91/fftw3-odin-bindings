@@ -1,4 +1,4 @@
-fftw3: fftw3/fftw3.odin
+fftw3: fftw3/fftw3.odin fftw3/utils.odin
 	odin build fftw3 -build-mode:lib -out:fftw3/fftw3.a
 
 test: tests/tests.odin fftw3
